@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:9001/",
+    publicPath: "https://mfa-practice-domain1-app.vercel.app",
   },
 
   resolve: {
