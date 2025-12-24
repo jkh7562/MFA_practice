@@ -44,7 +44,7 @@ module.exports = (_, argv) => ({
       name: "domain1",
       filename: "domain1-app.js",
       remotes: {
-        main: "main@http://mfa-practice-main.vercel.app/main.js",
+        main: "main@https://mfa-practice-main.vercel.app/main.js",
       },
       exposes: {
         "./DomainApp": "./src/App.tsx",
