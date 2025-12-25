@@ -70,9 +70,9 @@ module.exports = (_, argv) => ({
     }),
     new Dotenv({
       path: './.env',
-  safe: false,
-  silent: true,
-  systemvars: true
+      safe: false,
+      silent: true,
+      systemvars: true
     }),
   ],
 });
