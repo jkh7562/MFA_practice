@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "https://mfa-practice-main.vercel.app/",
+    publicPath: process.env.MFA_Practice_Main_URL,
   },
 
   resolve: {
@@ -44,7 +44,7 @@ module.exports = (_, argv) => ({
       name: "main",
       filename: "main.js",
       remotes: {
-        domain1: "domain1@https://mfa-practice-domain1-app.vercel.app/domain1-app.js",
+        domain1: "domain1@" + process.env.MFA_Practice_Domain1_URL + "domain1-app.js",
       },
       exposes: {
         "./MainHome": "./src/components/MainHome.tsx",
@@ -70,10 +70,7 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
     new Dotenv({
-      path: './.env',
-      safe: false,
-      silent: true,
-      systemvars: true
+      path: '../.env',
     }),
   ],
 });
