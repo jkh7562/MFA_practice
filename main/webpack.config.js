@@ -4,6 +4,9 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 
+console.log("DEBUG: MFA_Practice_Main_URL =", process.env.MFA_Practice_Main_URL);
+console.log("DEBUG: MFA_Practice_Domain1_URL =", process.env.MFA_Practice_Domain1_URL);
+
 module.exports = (_, argv) => ({
   output: {
     publicPath: process.env.MFA_Practice_Main_URL,
