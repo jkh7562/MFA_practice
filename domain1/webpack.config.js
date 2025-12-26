@@ -70,6 +70,7 @@ module.exports = (_, argv) => ({
     }),
     new Dotenv({
       path: './.env',
+      systemvars: true
     }),
   ],
 });
