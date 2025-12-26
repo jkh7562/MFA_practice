@@ -69,7 +69,7 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
     new Dotenv({
-      systemvars: true
+      path: '../.env',
     }),
   ],
 });
