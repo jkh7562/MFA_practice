@@ -1,4 +1,3 @@
-require('dotenv').config();
 import React from "react";
 
 console.log("DEBUG: MFA_Practice_Main_URL =", process.env.MFA_Practice_Main_URL);
